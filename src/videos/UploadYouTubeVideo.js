@@ -173,13 +173,16 @@ export function UploadYoutubeVideo({
           }
 
           const taskId = await response.json();
+
           setUploadIndexId(currIndex);
+
           const videoData = {
             url: taskVideo.video_url || taskVideo.url,
             title: taskVideo.title,
             authorName: taskVideo.author.name,
             thumbnails: taskVideo.thumbnails,
           };
+          
           setTaskIds((prevIds) =>
             Array.isArray(prevIds)
               ? [...prevIds, { ...taskId, videoData }]

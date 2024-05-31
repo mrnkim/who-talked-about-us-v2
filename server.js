@@ -9,13 +9,11 @@ const axios = require("axios").default;
 const ytch = require("yt-channel-info");
 
 /** Define constants and configure TL API endpoints */
-const TWELVE_LABS_API_KEY = process.env.REACT_APP_API_KEY;
 const TWELVE_LABS_API = axios.create({
   baseURL: "https://api.twelvelabs.io/v1.2",
 });
-const PORT_NUMBER = process.env.REACT_APP_PORT_NUMBER
-  ? process.env.REACT_APP_PORT_NUMBER
-  : 4000;
+const TWELVE_LABS_API_KEY = process.env.REACT_APP_API_KEY;
+const PORT_NUMBER = process.env.REACT_APP_PORT_NUMBER || 4001;
 const PAGE_LIMIT_MAX = 50;
 
 /** Set up middleware for Express */

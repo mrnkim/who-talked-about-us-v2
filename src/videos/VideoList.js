@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect, useMemo } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { Col } from "react-bootstrap";
 import ReactPlayer from "react-player";
@@ -20,7 +20,7 @@ function VideoList({ videos, refetchVideos, currIndex }) {
   const [loading, setLoading] = useState(true);
   const queryClient = useQueryClient();
 
-  const videoIds = videos.map((video) => video._id);
+  const videoIds = useMemo(() => videos.map((video) => video._id), [videos]);
 
   useEffect(() => {
     const fetchVideosInfo = async () => {
