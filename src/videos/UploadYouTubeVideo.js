@@ -182,7 +182,7 @@ export function UploadYoutubeVideo({
             authorName: taskVideo.author.name,
             thumbnails: taskVideo.thumbnails,
           };
-          
+
           setTaskIds((prevIds) =>
             Array.isArray(prevIds)
               ? [...prevIds, { ...taskId, videoData }]
@@ -267,7 +267,6 @@ export function UploadYoutubeVideo({
                     <div className="taskVideo">
                       <TaskVideo taskVideo={taskVideo} />
                       <div className="downloadSubmit">
-                        {/* <LoadingSpinner /> */}
                         {matchingTaskId ? (
                           <Task
                             taskId={matchingTaskId}

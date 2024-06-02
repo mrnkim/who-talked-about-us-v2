@@ -35,6 +35,7 @@ export function VideoComponents({
   const [searchQuery, setSearchQuery] = useState("");
   const [finalSearchQuery, setFinalSearchQuery] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const { setIndexId } = useContext(setIndexIdContext);
 
   const queryClient = useQueryClient();
@@ -58,13 +59,13 @@ export function VideoComponents({
     queryClient.invalidateQueries({
       queryKey: [keys.VIDEOS, currIndex, vidPage],
     });
-  }, [taskVideos, currIndex, vidPage]);
+  }, [taskVideos, currIndex, vidPage, queryClient]);
 
   useEffect(() => {
     queryClient.invalidateQueries({
       queryKey: [keys.AUTHORS, currIndex],
     });
-  }, [videos, currIndex]);
+  }, [videos, currIndex, queryClient]);
 
   return (
     <>

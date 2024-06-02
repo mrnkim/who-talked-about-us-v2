@@ -144,7 +144,7 @@ function SearchResults({ currIndex, finalSearchQuery, allAuthors }) {
     setNextPageToken(initialNextPageToken);
     setCombinedSearchResultVideos(initialSearchResultVideos);
     setCombinedSearchResults(initialSearchResults);
-  }, [initialNextPageToken]);
+  }, [initialNextPageToken, initialSearchResults, initialSearchResultVideos]);
 
   useEffect(() => {
     const organizedResults = organizeResults(
@@ -158,7 +158,7 @@ function SearchResults({ currIndex, finalSearchQuery, allAuthors }) {
     queryClient.invalidateQueries({
       queryKey: [keys.SEARCH, currIndex, finalSearchQuery],
     });
-  }, [currIndex, finalSearchQuery]);
+  }, [currIndex, finalSearchQuery, queryClient]);
 
   return (
     <div>
@@ -211,13 +211,13 @@ function SearchResults({ currIndex, finalSearchQuery, allAuthors }) {
                   😊 {Object.keys(organizedResults).length} Influencers talked
                   about "{finalSearchQuery}"
                 </div>
-                {Array.from(new Set(Object.keys(organizedResults))).sort().map(
-                  (author, index) => (
+                {Array.from(new Set(Object.keys(organizedResults)))
+                  .sort()
+                  .map((author, index) => (
                     <div key={index} className="channelResultPill">
                       {author}
                     </div>
-                  )
-                )}
+                  ))}
               </div>
             </Suspense>
           )}
@@ -228,11 +228,13 @@ function SearchResults({ currIndex, finalSearchQuery, allAuthors }) {
                 <div className="subtitle">
                   😢 {new Set(noResultAuthors).size} Influencers have not
                 </div>
-                {Array.from(new Set(noResultAuthors)).sort().map((author, index) => (
-                  <div key={index} className="channelNoResultPill">
-                    {author}
-                  </div>
-                ))}
+                {Array.from(new Set(noResultAuthors))
+                  .sort()
+                  .map((author, index) => (
+                    <div key={index} className="channelNoResultPill">
+                      {author}
+                    </div>
+                  ))}
               </div>
             </Suspense>
           )}
