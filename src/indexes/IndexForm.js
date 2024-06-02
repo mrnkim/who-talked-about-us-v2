@@ -15,6 +15,7 @@ import { useCreateIndex } from "../apiHooks/apiHooks";
 function IndexForm() {
   const [indexName, setIndexName] = useState("");
   const [error, setError] = useState("");
+  
   const { setIndexId } = useContext(setIndexIdContext);
 
   const createIndexMutation = useCreateIndex(setIndexId);

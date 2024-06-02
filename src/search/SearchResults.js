@@ -2,7 +2,7 @@ import { React, useState, useEffect, Suspense } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { ErrorBoundary } from "react-error-boundary";
 import {
-  useGetVideosOfSearchResults,
+  useSearchAndGetVideos,
   fetchNextPageSearchResults,
   fetchNextPageSearchResultVideos,
 } from "../apiHooks/apiHooks";
@@ -30,7 +30,7 @@ function SearchResults({ currIndex, finalSearchQuery, allAuthors }) {
     initialSearchResults,
     initialSearchResultVideos,
     refetch,
-  } = useGetVideosOfSearchResults(currIndex, finalSearchQuery);
+  } = useSearchAndGetVideos(currIndex, finalSearchQuery);
 
   const [nextPageToken, setNextPageToken] = useState(initialNextPageToken);
   const [combinedSearchResults, setCombinedSearchResults] =

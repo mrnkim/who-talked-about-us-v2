@@ -168,7 +168,7 @@ export function useGetTask(taskId) {
   });
 }
 
-export function useGetVideosOfSearchResults(indexId, query) {
+export function useSearchAndGetVideos(indexId, query) {
   const {
     data: initialSearchData,
     refetch,

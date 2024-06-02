@@ -13,6 +13,7 @@ import "./IndexForm.css";
 function ExistingIndexForm() {
   const [inputIndexId, setInputIndexId] = useState("");
   const [error, setError] = useState("");
+  
   const { setIndexId } = useContext(setIndexIdContext);
 
   function handleChange(evt) {
