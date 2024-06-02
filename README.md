@@ -7,13 +7,15 @@
 "Who Talked About Us?" is an influencer-filtering app where a user can:
 
 1. Create an index (a library of videos)
-2. Upload YouTube videos in bulk by (public) playlist ID, channel ID, or JSON file
-3. Filter the videos and channels that mention a provided keyword (e.g., _applying MAC gold highlighter_)
+2. Upload YouTube videos in bulk by YouTube playlist ID, channel ID, or a JSON file
+3. Filter the videos and channels that mention a provided keyword (e.g., Rare Beauty lip oil)
 4. View specific timelines or references of videos mentioning the keyword
 
 This application utilizes [Twelve Labs API](https://docs.twelvelabs.io/docs) for the rich, contextual video search. Twelve Labs is an AI-powered video understanding platform that extracts various types of information from videos, such as movement and actions, objects and people, sound, text on screen, and speech.
 
-  <img src="public/frontPage.png" alt="frontPage screenshot" />
+📌 Check out the [Demo](https://who-talked-about-us-vercel-client.vercel.app/)! (_Please note: This is a simplified version of the app_)
+
+[![search result screenshot](public/search.gif)](https://who-talked-about-us-vercel-client.vercel.app/)
 
 ### Built With
 
@@ -30,24 +32,20 @@ This application utilizes [Twelve Labs API](https://docs.twelvelabs.io/docs) for
 
 ## ✨ What is it for?
 
-After years of experience in influencer partnerships as a marketing professional in the beauty industry, I've learned a valuable lesson in selecting the ideal YouTube or TikTok influencer for a brand. (Yes, I’m a marketing professional turned software engineer 😉). The most successful collaborations tend to happen organically with influencers who are already genuine enthusiasts of your products or brand. However, identifying these influencers can be challenging, especially when your brand isn't explicitly mentioned in video titles or descriptions. This has been a personal pain point, such as when a YouTuber features your product in a video without explicitly naming your brand, making it hard to discover through conventional searches.
+After years of experience in influencer partnerships as a marketing professional in the beauty industry (Yes, I’m a marketing professional turned software engineer 😉), I've learned a key lesson: the best collaborations happen with influencers who are genuine fans of your brand. For example, if you're promoting brand “A” and notice influencers mentioning “A” without prior contact, they're usually open to partnerships.
 
-That's where the Who Talked About Us with Twelve Labs API can be a game-changer. Unlike traditional YouTube or TikTok searches, this API enables deep contextual video searches by extracting various elements from videos, including movements, objects, people, sounds, on-screen text, and speech. By inputting keywords or specific descriptions, such as "_applying MAC gold highlighter_," you can uncover videos discussing your brand or products with precise moments of reference. This innovative approach empowers you to build a targeted list of influencers, complete with details about the products they've mentioned and the context, providing valuable insights for more effective engagement and meaningful connections.
-
-<img src="public/search_demonstration.gif" alt="search result screenshot" style="border: 1px solid black;" />
-
-From the bottom of the search results, you can effortlessly identify that Jean Watts, Risabae, Glamzilla, and Smitha Deepak mention "_MAC gold highlighter_," in their videos along with the exact moments of references. In contrast, the videos from 18 influencers including British Vogue did not feature such mentions. Armed with this comprehensive result, you can strategically prioritize reaching out to influencers like Jean and Risabe, armed with the right context for more impactful collaborations.
+Finding these influencers can be challenging, especially when your brand isn't in video titles or descriptions. This inspired me to create Who Talked About Us using the Twelve Labs API. Unlike regular searches, it enables deep contextual video searches, extracting elements like movements, objects, people, sounds, text, and speech. By inputting keywords like "Rare Beauty lip oil," you can discover videos discussing your brand, complete with exact moments and context.
 
 ## 🚘 How to Use
 
-1. Either create a new index or provide an index id of the existing index that you already created/uploaded videos _directly through this app_ before. You can look up the index ids by [listing indexes](https://docs.twelvelabs.io/v1.2/reference/list-indexes).
+1. Either create a new index or provide an index ID of the existing index that you already created. You can look up the index IDs by [listing indexes](https://docs.twelvelabs.io/v1.2/reference/list-indexes).
 
-   - This app _only_ supports the videos uploaded/indexed directly through this app
+   - This app _only_ supports YouTube videos
 
 2. Once you are inside an index, Begin by uploading videos in bulk to the app using either YouTube [playlist ID](https://www.sociablekit.com/find-youtube-playlist-id/#:~:text=Go%20to%20your%20target%20YouTube,playlist%20ID%20is%20PLFs4vir_WsTwEd%2DnJgVJCZPNL3HALHHpF), [channel ID](https://mixedanalytics.com/blog/find-a-youtube-channel-id/), or JSON file.
 
    - A YouTube playlist and channel should be public
-   - The format of a JSON file should follow below structure
+   - The format of a JSON file should follow the below structure
 
      ```
      [
@@ -65,7 +63,7 @@ From the bottom of the search results, you can effortlessly identify that Jean W
 
 4. The search results will be shown grouped by each channel (influencer) and video, displaying moments in videos where your keyword is mentioned or featured.
 
-5. Based on these results, you can prioritize influencers and begin your outreach efforts, forging partnerships that can expand your brand reach and influence. Remember, success in influencer marketing is all about forming authentic partnerships!
+5. Based on these results, you can prioritize influencers and begin your outreach efforts!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,11 +73,11 @@ From the bottom of the search results, you can effortlessly identify that Jean W
 
 Visit [Twelve Labs Playground](https://playground.twelvelabs.io/) to generate your API Key
 
-- Once you sign up, you'll receive complimentary credits allowing you to index up to 10 hours of video content!
+- Upon signing up, you'll receive free credits to index up to 10 hours of video content!
 
 ### Step 2 (Option 1). Start the App on Replit
 
-1. Click the button below and fork the repl
+1. Click the button below and fork the replIt
 
    [![Run on Replit](https://replit.com/badge/github/mrnkim/Who-Talked-About-Us)](https://replit.com/@twelvelabs/Who-Talked-About-Us)
 
@@ -89,24 +87,22 @@ Visit [Twelve Labs Playground](https://playground.twelvelabs.io/) to generate yo
    REACT_APP_API_KEY=<YOUR API KEY>
    ```
 
-3. Stop and Run the Repl
+3. Stop and Run the Repl again
 
 ### Step 2 (Option 2). Start the App Locally
 
 1. Clone the current repo
 
    ```sh
-   git clone git@github.com:mrnkim/Who-Talked-About-Us.git
+   git clone git@github.com:mrnkim/who-talked-about-us-v2.git
    ```
 
-2. Create `.env` file in the root directory and update the values for each key
+2. Create `.env` file in the root directory and provide the values for each key
 
    ```
-    .env
-
     REACT_APP_API_KEY=<YOUR API KEY>
     REACT_APP_SERVER_URL=<YOUR SERVER URL> //e.g., http://localhost
-    REACT_APP_PORT_NUMBER=<YOUR PORT NUMBER> // Optional (set to 4000 by default if you do not set this variable)
+    REACT_APP_PORT_NUMBER=<YOUR PORT NUMBER> // e.g., 4000
    ```
 
 3. Start the server
@@ -128,4 +124,3 @@ Visit [Twelve Labs Playground](https://playground.twelvelabs.io/) to generate yo
 
 - Add more tests
 - Improve error handling and add data validations
-- Make it mobile-friendly
