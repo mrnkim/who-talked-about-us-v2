@@ -15,7 +15,11 @@ This application utilizes [Twelve Labs API](https://docs.twelvelabs.io/docs) for
 
 📌 Check out the [Demo](https://who-talked-about-us-vercel-client.vercel.app/)! (_Please note: This is a simplified version of the app_)
 
-[![search result screenshot](public/search.gif)](https://who-talked-about-us-vercel-client.vercel.app/)
+<div align="center">
+  <a href="https://who-talked-about-us-vercel-client.vercel.app/">
+    <img src="public/search.gif" alt="search result screenshot" style="border: 1px solid black;" />
+  </a>
+</div>
 
 ### Built With
 
@@ -35,37 +39,6 @@ This application utilizes [Twelve Labs API](https://docs.twelvelabs.io/docs) for
 After years of experience in influencer partnerships as a marketing professional in the beauty industry (Yes, I’m a marketing professional turned software engineer 😉), I've learned a key lesson: the best collaborations happen with influencers who are genuine fans of your brand. For example, if you're promoting brand “A” and notice influencers mentioning “A” without prior contact, they're usually open to partnerships.
 
 Finding these influencers can be challenging, especially when your brand isn't in video titles or descriptions. This inspired me to create Who Talked About Us using the Twelve Labs API. Unlike regular searches, it enables deep contextual video searches, extracting elements like movements, objects, people, sounds, text, and speech. By inputting keywords like "Rare Beauty lip oil," you can discover videos discussing your brand, complete with exact moments and context.
-
-## 🚘 How to Use
-
-1. Either create a new index or provide an index ID of the existing index that you already created. You can look up the index IDs by [listing indexes](https://docs.twelvelabs.io/v1.2/reference/list-indexes).
-
-   - This app _only_ supports YouTube videos
-
-2. Once you are inside an index, Begin by uploading videos in bulk to the app using either YouTube [playlist ID](https://www.sociablekit.com/find-youtube-playlist-id/#:~:text=Go%20to%20your%20target%20YouTube,playlist%20ID%20is%20PLFs4vir_WsTwEd%2DnJgVJCZPNL3HALHHpF), [channel ID](https://mixedanalytics.com/blog/find-a-youtube-channel-id/), or JSON file.
-
-   - A YouTube playlist and channel should be public
-   - The format of a JSON file should follow the below structure
-
-     ```
-     [
-      { "url": "<VIDEO URL>" },
-      { "url": "<VIDEO URL>" }
-      ...
-     ]
-     ```
-
-3. Once the videos are uploaded, you can conduct a search using any keyword. Here are some suggestions:
-
-   - Enter your brand name or product name and discover who's already talking about you in their videos
-   - Enter your competitors' brand names to see what types of influencers they're attracting
-   - You can also search for very specific or contextual keywords such as "_applying MAC gold highlighter_" or "_holding Gentle Monster sunglasses_"!
-
-4. The search results will be shown grouped by each channel (influencer) and video, displaying moments in videos where your keyword is mentioned or featured.
-
-5. Based on these results, you can prioritize influencers and begin your outreach efforts!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔑 Getting Started
 
@@ -117,6 +90,37 @@ Visit [Twelve Labs Playground](https://playground.twelvelabs.io/) to generate yo
    npm install
    npm start
    ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🚘 How to Use
+
+1. Either create a new index or provide an index ID of the existing index that you already created. You can look up the index IDs by [listing indexes](https://docs.twelvelabs.io/v1.2/reference/list-indexes).
+
+   - This app _only_ supports YouTube videos
+
+2. Once you are inside an index, Begin by uploading videos in bulk to the app using either YouTube [playlist ID](https://www.sociablekit.com/find-youtube-playlist-id/#:~:text=Go%20to%20your%20target%20YouTube,playlist%20ID%20is%20PLFs4vir_WsTwEd%2DnJgVJCZPNL3HALHHpF), [channel ID](https://mixedanalytics.com/blog/find-a-youtube-channel-id/), or JSON file.
+
+   - A YouTube playlist and channel should be public
+   - The format of a JSON file should follow the below structure
+
+     ```
+     [
+      { "url": "<VIDEO URL>" },
+      { "url": "<VIDEO URL>" }
+      ...
+     ]
+     ```
+
+3. Once the videos are uploaded, you can conduct a search using any keyword. Here are some suggestions:
+
+   - Enter your brand name or product name and discover who's already talking about you in their videos
+   - Enter your competitors' brand names to see what types of influencers they're attracting
+   - You can also search for very specific or contextual keywords such as "_applying MAC gold highlighter_" or "_holding Gentle Monster sunglasses_"!
+
+4. The search results will be shown grouped by each channel (influencer) and video, displaying moments in videos where your keyword is mentioned or featured.
+
+5. Based on these results, you can prioritize influencers and begin your outreach efforts!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
