@@ -50,9 +50,9 @@ Visit [Twelve Labs Playground](https://playground.twelvelabs.io/) to generate yo
 
 ### Step 2 (Option 1). Start the App on Replit
 
-1. Click the button below and fork the replIt
+1. Click the button below and fork the repl
 
-   [![Run on Replit](https://replit.com/badge/github/mrnkim/Who-Talked-About-Us)](https://replit.com/@twelvelabs/Who-Talked-About-Us)
+   [![Run on Replit](https://replit.com/badge/github/mrnkim/who-talked-about-us-v2)](https://replit.com/@twelvelabs/who-talked-about-us-v2)
 
 2. Update Secrets (equivalent to .env)
 
