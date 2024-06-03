@@ -1,9 +1,9 @@
-modules = ["nodejs-20:v8-20230920-bd784b9"]
+modules = ["nodejs-20", "web", "nix"]
 hidden = [".config", "package-lock.json"]
 run = "node server.js & npm start"
 
 [nix]
-channel = "stable-23_05"
+channel = "stable-23_11"
 
 [unitTest]
 language = "nodejs"
@@ -20,3 +20,7 @@ externalPort = 80
 [[ports]]
 localPort = 4000
 externalPort = 3000
+
+[[ports]]
+localPort = 4001
+externalPort = 3001

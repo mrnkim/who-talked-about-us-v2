@@ -13,7 +13,7 @@ const TWELVE_LABS_API = axios.create({
   baseURL: "https://api.twelvelabs.io/v1.2",
 });
 const TWELVE_LABS_API_KEY = process.env.REACT_APP_API_KEY;
-const PORT_NUMBER = process.env.REACT_APP_PORT_NUMBER || 4001;
+const PORT_NUMBER = process.env.REACT_APP_PORT_NUMBER || 4000;
 const PAGE_LIMIT_MAX = 50;
 
 /** Set up middleware for Express */
@@ -82,7 +82,7 @@ app.get("/indexes/:indexId", async (request, response, next) => {
       `/indexes/${request.params.indexId}`,
       {
         headers,
-      }
+      },
     );
     response.json(apiResponse.data);
   } catch (error) {
@@ -131,7 +131,7 @@ app.delete("/indexes", async (request, response, next) => {
       `/indexes/${request.query.indexId}`,
       {
         headers,
-      }
+      },
     );
     response.json(apiResponse.data);
   } catch (error) {
@@ -157,7 +157,7 @@ app.get("/indexes/:indexId/videos", async (request, response, next) => {
       {
         headers,
         params,
-      }
+      },
     );
     response.json(apiResponse.data);
   } catch (error) {
@@ -194,13 +194,13 @@ app.get("/indexes/:indexId/authors", async (request, response, next) => {
           videos.data.map(async (video) => {
             const videoInfo = await TWELVE_LABS_API.get(
               `/indexes/${indexId}/videos/${video._id}`,
-              { headers }
+              { headers },
             );
 
             const author =
               videoInfo.data?.source?.name || video.metadata.author;
             authors.add(author);
-          })
+          }),
         );
 
         if (videos.page_info && videos.page_info.total_page > page) {
@@ -264,13 +264,13 @@ app.get(
         `/indexes/${indexId}/videos/${videoId}`,
         {
           headers,
-        }
+        },
       );
       response.json(apiResponse.data);
     } catch (error) {
       return next(error);
     }
-  }
+  },
 );
 
 /** Get search results of a specific page */
@@ -323,7 +323,7 @@ app.post("/indexVideo", async (request, response, next) => {
     const apiResponse = await TWELVE_LABS_API.post(
       `/tasks/external-provider`,
       data,
-      { headers }
+      { headers },
     );
     response.json(apiResponse.data);
   } catch (error) {
