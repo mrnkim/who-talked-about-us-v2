@@ -4,14 +4,7 @@
 
 ## 👋 Introduction
 
-"Who Talked About Us?" is an influencer-filtering app where a user can:
-
-1. Create an index (a library of videos)
-2. Upload YouTube videos in bulk by YouTube playlist ID, channel ID, or a JSON file
-3. Filter the videos and channels that mention a provided keyword (e.g., Rare Beauty lip oil)
-4. View specific timelines or references of videos mentioning the keyword
-
-This application utilizes [Twelve Labs API](https://docs.twelvelabs.io/docs) for the rich, contextual video search. Twelve Labs is an AI-powered video understanding platform that extracts various types of information from videos, such as movement and actions, objects and people, sound, text on screen, and speech.
+As an experienced marketing professional in the beauty industry, I've discovered the value of collaborating with influencers who are genuinely enthusiastic about your brand. These influencers often mention your brand organically, making them prime candidates for partnerships. To streamline the process of identifying such influencers, I created an application called "Who Talked About Us" using the [Twelve Labs API](https://docs.twelvelabs.io/docs). This application enables deep contextual video searches, identifying mentions of your brand in YouTube videos, even if your brand isn't explicitly named in titles or descriptions. Let's delve into how you can build a similar app and leverage the Twelve Labs API for influencer identification
 
 📌 Check out the [Demo](https://who-talked-about-us-vercel-client.vercel.app/)! (_Please note: This is a simplified version of the app_)
 
@@ -33,12 +26,6 @@ This application utilizes [Twelve Labs API](https://docs.twelvelabs.io/docs) for
 - [React Player](https://www.npmjs.com/package/react-player)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## ✨ What is it for?
-
-After years of experience in influencer partnerships as a marketing professional in the beauty industry (Yes, I’m a marketing professional turned software engineer 😉), I've learned a key lesson: the best collaborations happen with influencers who are genuine fans of your brand. For example, if you're promoting brand “A” and notice influencers mentioning “A” without prior contact, they're usually open to partnerships.
-
-Finding these influencers can be challenging, especially when your brand isn't in video titles or descriptions. This inspired me to create Who Talked About Us using the Twelve Labs API. Unlike regular searches, it enables deep contextual video searches, extracting elements like movements, objects, people, sounds, text, and speech. By inputting keywords like "Rare Beauty lip oil," you can discover videos discussing your brand, complete with exact moments and context.
 
 ## 🔑 Getting Started
 
