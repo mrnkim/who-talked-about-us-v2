@@ -10,7 +10,11 @@ import "./SearchForm.css";
  *
  */
 
-function SearchForm({ searchQuery, setSearchQuery, setFinalSearchQuery }) {
+function SearchForm({
+  searchQuery,
+  setSearchQuery,
+  setFinalSearchQuery,
+}) {
   const [error, setError] = useState("");
 
   function handleChange(evt) {
@@ -23,6 +27,7 @@ function SearchForm({ searchQuery, setSearchQuery, setFinalSearchQuery }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
+
     if (searchQuery) {
       const sanitizedQuery = sanitize(searchQuery);
       if (!sanitizedQuery) {

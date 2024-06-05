@@ -144,7 +144,7 @@ function SearchResults({ currIndex, finalSearchQuery, allAuthors }) {
     setNextPageToken(initialNextPageToken);
     setCombinedSearchResultVideos(initialSearchResultVideos);
     setCombinedSearchResults(initialSearchResults);
-  }, [initialNextPageToken, initialSearchResults, initialSearchResultVideos]);
+  }, [initialNextPageToken, finalSearchQuery]);
 
   useEffect(() => {
     const organizedResults = organizeResults(

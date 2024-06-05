@@ -35,7 +35,7 @@ export function VideoComponents({
   const [searchQuery, setSearchQuery] = useState("");
   const [finalSearchQuery, setFinalSearchQuery] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const { setIndexId } = useContext(setIndexIdContext);
 
   const queryClient = useQueryClient();
