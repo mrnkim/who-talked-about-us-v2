@@ -47,7 +47,7 @@ Visit [Twelve Labs Playground](https://playground.twelvelabs.io/) to generate yo
    REACT_APP_API_KEY=<YOUR API KEY>
    ```
 
-3. Run the Repl again
+3. Run the Repl
 
 ### Step 2 (Option 2). Start the App Locally
 
