@@ -37,17 +37,17 @@ Visit [Twelve Labs Playground](https://playground.twelvelabs.io/) to generate yo
 
 ### Step 2 (Option 1). Start the App on Replit
 
-1. Click the button below and fork the repl
+1. Click the button below
 
-   [![Run on Replit](https://replit.com/badge/github/mrnkim/who-talked-about-us-v2)](https://replit.com/@twelvelabs/who-talked-about-us-v2)
+   [![Run on Replit](https://replit.com/badge/github/mrnkim/who-talked-about-us-v2)](https://replit.com/new/github/mrnkim/who-talked-about-us-v2)
 
-2. Update Secrets (equivalent to .env)
+2. Add Secrets (equivalent to .env), which is located in the Tools pane
 
    ```
    REACT_APP_API_KEY=<YOUR API KEY>
    ```
 
-3. Stop and Run the Repl again
+3. Run the Repl again
 
 ### Step 2 (Option 2). Start the App Locally
 
